@@ -801,10 +801,10 @@ tests:
                 image: IMAGE_REPO:IMAGE_TAG
         - image: CI_IMAGE_2
           repo: quay.io/rrp-dev-ci/control-plane-operator
-          target: argocd/config/management-cluster/hypershift/values.yaml
+          target: argocd/config/regional-cluster/hyperfleet/values.yaml
           override:
-            hypershift:
-              hypershift:
+            hyperfleet:
+              helmValues:
                 controlPlaneOperatorImage: IMAGE_REPO:IMAGE_TAG
     workflow: rosa-hyperfleet-ephemeral-e2e
 zz_generated_metadata:
